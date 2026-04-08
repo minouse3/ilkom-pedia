@@ -1,0 +1,14 @@
+---
+export const prerender = false;
+
+const langHeader = Astro.request.headers.get('accept-language') || '';
+const lang = langHeader.toLowerCase();
+
+// List of supported languages.
+const supportedLanguages = ['id', 'en'];
+
+// Find the first supported language that appears in the Accept-Language header.
+const preferredLang =
+  supportedLanguages.find((lng) => lang.includes(lng)) || 'en';
+
+return Astro.redirect(`${preferredLang}`);
