@@ -1,0 +1,10 @@
+{
+  "lecturer": {
+    "fullname": "Full Name",
+    "nickname": "Nickname",
+    "position": "Position",
+    "email": "E-mail",
+    "nip": "NIP",
+    "nidn": "NIDN"
+  }
+}

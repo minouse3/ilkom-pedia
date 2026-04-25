@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import mdx from '@astrojs/mdx'
 import pluginUseTranslations from './src/plugins/plugin-use-translations';
 
 // https://astro.build/config
@@ -18,17 +19,15 @@ export default defineConfig({
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/minouse3/ilkom-pedia' }],
 			sidebar: [
 				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
+					label: 'Hello, World!',
+					autogenerate: { directory: 'hello-world' },
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'Lecturers',
+					autogenerate: { directory: 'lecturers' },
 				},
 			],
 		}),
+		mdx(),
 	],
 });

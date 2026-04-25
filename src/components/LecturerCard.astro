@@ -1,0 +1,99 @@
+---
+import { useTranslations } from '../i18n'; // adjust to your setup
+
+const rawLocale = Astro.currentLocale;
+
+const locale =
+  rawLocale === 'en' || rawLocale === 'id' || rawLocale === 'jv'
+    ? rawLocale
+    : 'en';
+
+const t = useTranslations(locale);
+
+const {
+  fullname,
+  nickname,
+  position,
+  email,
+  nip,
+  nidn,
+  image,
+} = Astro.props;
+---
+
+<div class="lecturer-card">
+  <img src={image} alt="Lecturer photo" class="lecturer-photo" />
+
+  <div class="lecturer-info">
+    <p><span>{t('lecturer.fullname')}</span> {fullname}</p>
+    <p><span>{t('lecturer.nickname')}</span> {nickname}</p>
+    <p><span>{t('lecturer.position')}</span> {position}</p>
+    <p><span>{t('lecturer.email')}</span> {email}</p>
+    <p><span>{t('lecturer.nip')}</span> {nip}</p>
+    <p><span>{t('lecturer.nidn')}</span> {nidn}</p>
+  </div>
+</div>
+
+<style>
+.lecturer-card {
+  display: flex;
+  gap: 2.5rem; 
+  align-items: stretch;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: var(--sl-color-gray-6, #1e1e2e); 
+}
+
+.lecturer-photo {
+  width: 50%; 
+  height: auto; 
+  aspect-ratio: 1414 / 2000; 
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.lecturer-info {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  margin: 0;
+  padding: 1rem 0; /* Added breathing room so top/bottom text isn't glued to the edges */
+}
+
+.lecturer-info p {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem; /* Tighter gap between label and value */
+  margin: 0; 
+  line-height: 1.3;
+  color: #f8f8f2; 
+  font-size: 1.2rem; /* Standard readable size for the values */
+}
+
+.lecturer-info span {
+  font-weight: 800; /* Extra bold for the label */
+  font-size: 1rem; /* FIXED: Made smaller than the value text */
+  text-transform: uppercase; 
+  letter-spacing: 1px; /* Slightly increased letter spacing for readability */
+  color: #a1a1aa; 
+}
+
+/* Mobile Responsive Fixes */
+@media (max-width: 768px) {
+  .lecturer-card {
+    flex-direction: column;
+    padding: 1.25rem; 
+  }
+  
+  .lecturer-photo {
+    width: 100%; /* FIXED: Changed from 768px to 100% so it fits the phone screen */
+  }
+
+  .lecturer-info {
+    justify-content: flex-start; 
+    gap: 1.25rem; /* Clean, consistent spacing between blocks on mobile */
+    padding: 0.5rem 0 0 0; 
+  }
+}
+</style>

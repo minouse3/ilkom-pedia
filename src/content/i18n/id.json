@@ -1,0 +1,10 @@
+{
+  "lecturer": {
+    "fullname": "Nama Lengkap",
+    "nickname": "Panggilan",
+    "position": "Jabatan",
+    "email": "E-mail",
+    "nip": "NIP",
+    "nidn": "NIDN"
+  }
+}
