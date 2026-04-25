@@ -1,7 +1,5 @@
 # ilkom-pedia
 
-A collaborative knowledge base for Ilkom.
-
 ## Maintainers
 
 This project is currently maintained by:
