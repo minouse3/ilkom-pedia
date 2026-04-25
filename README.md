@@ -52,4 +52,4 @@ Contributions are welcome! Please open an issue or submit a pull request.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE]([https://github.com/minouse3/ilkom-pedia/blob/main/LICENSE](https://github.com/minouse3/ilkom-pedia?tab=MIT-1-ov-file#MIT-1-ov-file)) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/minouse3/ilkom-pedia?tab=MIT-1-ov-file#MIT-1-ov-file) file for details.
