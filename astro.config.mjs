@@ -20,11 +20,47 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: 'Hello, World!',
+					translations: {
+						id: 'Hello World!',
+						en: 'Hello World',
+						jv: 'Hello Dunyo',
+					},
 					autogenerate: { directory: 'hello-world' },
 				},
 				{
 					label: 'Lecturers',
+					translations: {
+						id: 'Dosen',
+						en: 'Lecturers',
+						jv: 'Gatau',
+					},
 					autogenerate: { directory: 'lecturers' },
+				},
+				{
+					label: 'Majors',
+					translations: {
+						id: 'Penjurusan',
+						en: 'Majors',
+						jv: 'gatau',
+					},
+					autogenerate: { directory: 'majors' },
+				},
+				{
+					label: 'Syllabus',
+					translations: {
+						id: 'Kurikulum',
+						en: 'Syllabus',
+						jv: 'yo ndak tau',
+					},
+					autogenerate: { directory: 'syllabus' },
+				},{
+					label: 'Organization',
+					translations: {
+						id: 'UKM/Underbow/Komunitas',
+						en: 'Community',
+						jv: 'saya akan lawan!',
+					},
+					autogenerate: { directory: 'organization-community' },
 				},
 			],
 		}),
