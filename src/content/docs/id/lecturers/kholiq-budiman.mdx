@@ -3,18 +3,24 @@ title: Kholiq Budiman, S.Pd., M.Kom.
 tableOfContents: false
 ---
 
+export const slug = import.meta.url
+  .split('/')
+  .pop()
+  ?.replace(/\.mdx$/, '');
+
+export const imagePath = `../../../src/assets/lecturers-pic/${slug}.png`;
 import LecturerCard from '../../../../components/LecturerCard.astro';
 
 ## Profil
 
 <LecturerCard
-  fullname="Kholiq Budiman"
+  fullname={frontmatter.title}
   nickname="Pak Kholiq"
   position="Lektor/Dosen"
   email="kholiq.budiman@mail.unnes.ac.id"
   nip="199209242019031013"
   nidn="0024099201"
-  image="../../../src/assets/lecturers-pic/kholiq-budiman.png"
+  image={imagePath}
 />
 
 

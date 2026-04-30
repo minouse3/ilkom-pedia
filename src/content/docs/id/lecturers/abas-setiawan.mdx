@@ -1,3 +1,77 @@
 ---
 title: Abas Setiawan, S.Kom., M.Cs.
+tableOfContents: false
 ---
+export const slug = import.meta.url
+  .split('/')
+  .pop()
+  ?.replace(/\.mdx$/, '');
+
+export const imagePath = `../../../src/assets/lecturers-pic/${slug}.png`;
+
+import LecturerCard from '../../../../components/LecturerCard.astro';
+
+## Profil (Belum Diedit)
+
+<LecturerCard
+  fullname={frontmatter.title}
+  nickname="Pak Abas"
+  position="Lektor/Dosen"
+  email="abas.setiawan@mail.unnes.ac.id"
+  nip="199110302022031006"
+  nidn="0630109102"
+  image={imagePath}
+/>
+
+
+## Pendidikan
+
+| Gelar | Program Studi | Institusi | Tahun |
+|--------|-------|-------------|------|
+| M.Cs. | Ilmu Komputer Minat Manajemen Informasi | Universitas Diponegoro | 2014 – 2017 |
+| S.Kom. | Teknik Informatika | Universitas Dian Nuswantoro | 2009 – 2013 |
+
+
+## Bidang Yang Dikuasai
+
+- 
+
+
+## Mata Kuliah Yang Pernah Diajar 
+
+- Algoritma Dan Pemrograman
+- Algoritma Dan Pemrograman (Fungsional)
+- Algoritma Dan Struktur Data
+- Algoritma Pemrograman
+- Algoritma Pemrograman Dan Struktur Data
+- Analisis Algoritma
+- Bahasa Inggris
+- Bahasa Inggris Untuk Sistem Informasi
+- Bahasa Inggris Untuk Teknik Informatika
+- Bahasa Pemrograman
+- Dasar Dasar Komputasi
+- Dasar Pemrograman
+- Dasar Pemrograman Game
+- Etika Profesi
+- Game Programming
+- Grafika Komputer
+- Interaksi Manusia Dan Komputer
+- Jaringan Komputer
+- Kecerdasan Buatan
+- Literasi Digital Dan Kemanusiaan
+- Nama Mata Kuliah
+- New Media
+- Pemodelan Dan Simulasi
+- Pemrograman Berorientasi Objek
+- Pemrograman Game
+- Pengajaran Berbantuan Komputer
+- Pengantar Teknologi Informasi
+- Perencanaan Sumber Daya Perusahaan
+- Proyek Interaktif
+- Proyek Perangkat Lunak
+- Sistem Operasi
+- Strategi Algoritma
+- Struktur Data
+- Teknik Kompilasi
+- Teknik Multimedia
+- Teori Bahasa Dan Otomata
